@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Kevin Zaragoza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Kevin Zaragoza</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Computer Science Student</p>
+        <h1>Hello, I’m Kevin Zaragoza.</h1>
+        <p class="hero-description">
+          I am a computer science student in Chicago with an interest in technology, problem solving, and building impactful projects. Explore my work, learn more about my goals, and connect with me.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="primary-button">View My Projects</a>
+          <a href="about.html" class="secondary-button">Learn More About Me</a>
+        </div>
+      </div>
+
+      <div class="hero-image-card">
+        <img src="ChicagoSkyline.jpg" alt="Chicago skyline" class="hero-image">
+      </div>
+    </section>
+
+    <section class="quick-highlights">
+      <div class="highlight-card">
+        <h2>Projects</h2>
+        <p>See coursework, technical work, and portfolio pieces that reflect my growth in computer science and technology.</p>
+      </div>
+      <div class="highlight-card">
+        <h2>Goals</h2>
+        <p>Learn more about my interests, my background, and the direction I want to take in my career.</p>
+      </div>
+      <div class="highlight-card">
+        <h2>Contact</h2>
+        <p>Find my GitHub, LinkedIn, and direct contact information in a cleaner and more modern layout.</p>
+      </div>
+    </section>
+
+    <section class="signup-section">
+      <div class="section-heading">
+        <p class="section-label">Stay Connected</p>
+        <h2>Join My Tech Updates</h2>
+        <p>Get notified when I add new projects and continue building my portfolio.</p>
+      </div>
+
+      <form class="signup-form" id="emailForm">
+        <input type="email" id="emailInput" placeholder="Enter your email address" aria-label="Email address">
+        <button type="button" onclick="signup()">Sign Up</button>
+      </form>
+
+      <p id="emailMessage" class="form-message"></p>
+    </section>
+
+    <section class="badge-section">
+      <div class="section-heading">
+        <p class="section-label">Identity</p>
+        <h2>Personal Site Badge</h2>
+      </div>
+
+      <div class="badge-card">
+        <svg width="140" height="140" viewBox="0 0 100 100" aria-label="Kevin Zaragoza badge">
+          <circle cx="50" cy="50" r="45" fill="#7b5cff"></circle>
+          <text x="50" y="58" text-anchor="middle" font-size="22" fill="white" font-family="Arial">KZ</text>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function signup() {
+      const email = document.getElementById("emailInput").value.trim();
+      const msg = document.getElementById("emailMessage");
+
+      if (email === "") {
+        msg.textContent = "Please enter your email address.";
+        msg.className = "form-message error";
+      } else {
+        msg.textContent = "Thanks for signing up. You are now subscribed.";
+        msg.className = "form-message success";
+        document.getElementById("emailInput").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
